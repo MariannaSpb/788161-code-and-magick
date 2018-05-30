@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Marianna Minich](https://up.htmlacademy.ru/javascript/14/user/788161).
-* Наставник: `Неизвестно`.
+* Наставник: `Данил Чекалин`.
 
 ---
 
