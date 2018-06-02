@@ -182,38 +182,23 @@
   </div>
 </template>
 <script>
-  // объявляем переменные (все что известно)
- var fireballSize = 22; // размер фаербола
-  var wizardSpeed = 3; // скорость мага 
-  var wizardWidth = 70; //ширина мага 
-  var wizardHeight; // высота мага
+  var fireballSize = 22; 
+  var wizardSpeed = 3;  
+  var wizardWidth = 70; 
   var getFireballSpeed = function(left) {
-    if (left) {
-      var fireballSpeed = 5;
-      return fireballSpeed;
-    } else {
-      var fireballSpeed = 2;
-      return fireballSpeed;
-    }
+      return left ? 5 : 2;  
   };
-
   var getWizardHeight = function(wizardWidth) {
-     
-     wizardHeight = 1.337 * wizardWidth; // можно было сразу задать глобальной переменной??????
-     return wizardHeight;
+      return 1.337 * wizardWidth; 
   };
-
   var getWizardX = function(width) {
-     var wizardX = (width / 2) - wizardWidth;
-     return wizardX;
+      var wizardX = (width / 2) - wizardWidth;
+      return wizardX;
   };
-
   var getWizardY = function(height) {
-      var wizardY = height / 3 - wizardHeight;
-     // var wizardPointY = height - height / 3 - wizardHeight ;  //retutn height / 3 - wizardHeigh/ 2
-     return wizardY;
+      var wizardY = height / 2 - height / 3;
+      return wizardY;
   };
-
 </script>
 <script src="js/game.js"></script>
 
