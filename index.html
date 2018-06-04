@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <title>Код и Магия</title>
 </head>
 <body>
+
 
 <header>
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62
@@ -180,7 +181,23 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
-
+<script>
+  var fireballSize = 22;
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var getFireballSpeed = function(left) {
+      return left ? 5 : 2;
+  };
+  var getWizardHeight = function(wizardWidth) {
+      return 1.337 * wizardWidth;
+  };
+  var getWizardX = function(width) {
+      return (width / 2) - wizardWidth;
+  };
+  var getWizardY = function(height) {
+      return height / 2 - height / 3;
+  };
+</script>
 <script src="js/game.js"></script>
 
 </body>
