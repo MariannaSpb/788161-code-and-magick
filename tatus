@@ -1,0 +1,61 @@
+[33mcommit 26587dd91ef36be79f1f5b4ade5865b9cb5c452e[m[33m ([m[1;36mHEAD -> [m[1;32mmodule2-task1[m[33m)[m
+Author: Маря <marry-cherry-pie@mail.ru>
+Date:   Tue Jun 5 10:40:07 2018 +0300
+
+    результаты игры
+
+[33mcommit b1395c8ccc1f7f9cb6f022079135230d2e707921[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31macademy/master[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: c822e53 4c62c3b
+Author: Keks <keksobot@users.noreply.github.com>
+Date:   Mon Jun 4 17:32:02 2018 +0300
+
+    Merge pull request #1 from MariannaSpb/module1-task1
+
+[33mcommit 4c62c3b4589a4dbf9e93e68f3cd72dff4cba5ff2[m[33m ([m[1;31morigin/module1-task1[m[33m, [m[1;32mmodule1-task1[m[33m)[m
+Author: Маря <marry-cherry-pie@mail.ru>
+Date:   Mon Jun 4 17:00:43 2018 +0300
+
+    последние правки
+
+[33mcommit a5c3aad88f8a87bea4f0df824318d675210ca727[m
+Author: Маря <marry-cherry-pie@mail.ru>
+Date:   Sat Jun 2 16:00:33 2018 +0300
+
+    сократила код тернарным оператором и поправила синтаксис
+
+[33mcommit 1b891e8d195c8bc21bdf3edf927e7a6ed1563d08[m
+Author: Маря <marry-cherry-pie@mail.ru>
+Date:   Fri Jun 1 02:52:38 2018 +0300
+
+    изменила несколько параметров в index.html
+
+[33mcommit c957082846c16e4d8d5d92ca27ffa4635848f3ea[m
+Author: Маря <mar@sletat.ru>
+Date:   Thu May 31 00:09:12 2018 +0300
+
+    добавлена инфа о наставнике
+
+[33mcommit 22118f37960db84aca0bea3c5a2304bffc8d2885[m
+Author: Маря <mar@sletat.ru>
+Date:   Wed May 30 23:48:10 2018 +0300
+
+    начали вести историю
+
+[33mcommit a161da944e8ce05f930929d4d0b974317634c6e6[m
+Author: Маря <mar@sletat.ru>
+Date:   Wed May 30 23:09:09 2018 +0300
+
+     :writ
+     gnored, and an empty message aborts the commit.# Please enter the commit message for your changes. Lines starting# with '#' will be ignored, and an empty message aborts the commit.
+
+[33mcommit ec77d366c5c7a00d7cfa740d2685633418e382d4[m
+Author: Маря <marry-cherry-pie@mail.ru>
+Date:   Wed May 30 22:50:33 2018 +0300
+
+    начали вести историю
+
+[33mcommit c822e539b3e4f1abaa7267eb0e7f424d57aa1ff4[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Wed May 30 16:59:12 2018 +0300
+
+    :hatching_chick:
