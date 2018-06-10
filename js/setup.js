@@ -1,5 +1,5 @@
 'use strict';
- // откываем окно настройки:
+// откываем окно настройки:
 var setupWindow = document.querySelector('.setup');
 setupWindow.classList.remove('hidden');
 
