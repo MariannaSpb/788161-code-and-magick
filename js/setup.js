@@ -16,12 +16,6 @@ var renderName = function () {
   var fullName = NAMES[randomNames] + ' ' + SURNAMES[randomSurnames]; //  имя + фамилия
   return fullName;
 };
-// if ((Math.random ){
-//      return firstName + ' ' + secondName;
-//    } else {
-//       return secondName + ' ' + firstName;
-//    }
-
 // функция случайного цвета мантии
 var renderCoat = function () {
   var randomCoatColor = Math.floor(Math.random() * COAT_COLOR.length);
@@ -42,7 +36,7 @@ var WizardTemplate = document.querySelector('#similar-wizard-template').content.
 
 // функция создания шаблона 1 волшебника
 var renderWizard = function () {
-  var wizardElement = WizardTemplate.cloneNode(true); //копирую с содержимым
+  var wizardElement = WizardTemplate.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = renderName(); // по факту вставляет fullname которое возвращает функция
   wizardElement.querySelector('.wizard-coat').style.fill = renderCoat();
   wizardElement.querySelector('.wizard-eyes').style.fill = renderEyes();
