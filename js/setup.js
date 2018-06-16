@@ -65,8 +65,6 @@ similarListElement.appendChild(fragment);
 // открываем блок для  похожих героев
 document.querySelector('.setup-similar').classList.remove('hidden');
 
-// Одеть Надежду
-// tabindex="0">
 
 // Нажатие на элемент .setup-open удаляет класс hidden  у блока setup
 var setupOpen = document.querySelector('.setup-open');
@@ -88,9 +86,6 @@ var openDialog = function () {
 };
 
 var closeDialog = function () {
-  // if (!valueMissing) {
-  //   return;
-  // }
   setup.classList.add('hidden');
   document.removeEventListener('keydown', dialogEscPress);
 };
