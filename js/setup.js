@@ -80,7 +80,6 @@ var dialogEscPress = function (evt) {
   }
 };
 
-
 // функции открытия и закрытия окна
 var openDialog = function () {
   setup.classList.remove('hidden');
