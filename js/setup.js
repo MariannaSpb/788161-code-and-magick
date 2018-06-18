@@ -1,8 +1,4 @@
 'use strict';
-// откываем окно настройки:
-// var setupWindow = document.querySelector('.setup');
-// setupWindow.classList.remove('hidden');
-
 
 // создаю массивы данных о персонажах
 var NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
@@ -12,34 +8,22 @@ var EYES_COLORS = ['black', 'red', 'blue', 'yellow', 'green'];
 var FIREBALL_COLORS = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 var ESC_KEYCODE = 27;
 var ENTER_KEYCODE = 13;
+var setupOpen = document.querySelector('.setup-open');
+var setup = document.querySelector('.setup');
+var setupClose = setup.querySelector('.setup-close');
+var userNameInput = document.querySelector('.setup-user-name');
+var setupWizard = document.querySelector('.setup-wizard');
+var wizardCoat = setupWizard.querySelector('.wizard-coat');
+var wizardEyes = setupWizard.querySelector('.wizard-eyes');
+var wizardFireball = setup.querySelector('.setup-fireball-wrap');
+var inputChangeCoat = document.querySelector('input[name=coat-color]');
+var inputChangeEyes = document.querySelector('input[name=eyes-color]');
+var inputChangeFireball = document.querySelector('input[name=fireball-color]');
 
 var getRandElement = function (array) {
   var index = Math.floor(Math.random() * array.length);
   return array[index];
 };
-// функция случайного сочетания имя + фамилия
-// var renderName = function () {
-//   var randomNames = Math.floor(Math.random() * NAMES.length); // случайное имя
-//   var randomSurnames = Math.floor(Math.random() * SURNAMES.length); // случайная фамилия
-//   var fullName = NAMES[randomNames] + ' ' + SURNAMES[randomSurnames]; //  имя + фамилия
-//   return fullName;
-// };
-// // функция случайного цвета мантии
-// var renderCoat = function () {
-//   var randomCoatColor = Math.floor(Math.random() * COAT_COLOR.length);
-//   return COAT_COLOR[randomCoatColor];
-// };
-// // функция случайного цвета глаз волшебника
-// var renderEyes = function () {
-//   var randomEyesColors = Math.floor(Math.random() * EYES_COLORS.length);
-//   return EYES_COLORS[randomEyesColors];
-// };
-// // функция случайного цвета файрбола
-// var renderFireball = function () {
-//   var randomFireballColors = Math.floor(Math.random() * FIREBALL_COLORS.length);
-//   return FIREBALL_COLORS[randomFireballColors];
-// };
-
 
 // нашли на странице список волшебников:
 var similarListElement = document.querySelector('.setup-similar-list');
@@ -53,7 +37,7 @@ var renderWizard = function () {
   wizardElement.querySelector('.setup-similar-label').textContent = getRandElement(NAMES) + ' ' + getRandElement(SURNAMES); // по факту вставляет fullname которое возвращает функция
   wizardElement.querySelector('.wizard-coat').style.fill = getRandElement(COAT_COLOR);
   wizardElement.querySelector('.wizard-eyes').style.fill = getRandElement(EYES_COLORS);
-  wizardElement.querySelector('.wizard-eyes').style.fill = getRandElement(FIREBALL_COLORS);
+  document.querySelector('.setup-fireball-wrap').style.background = getRandElement(FIREBALL_COLORS);
   return wizardElement;
 };
 
@@ -66,13 +50,7 @@ similarListElement.appendChild(fragment);
 // открываем блок для  похожих героев
 document.querySelector('.setup-similar').classList.remove('hidden');
 
-// одеть надежду
-
-// Нажатие на элемент .setup-open удаляет класс hidden  у блока setup
-var setupOpen = document.querySelector('.setup-open');
-var setup = document.querySelector('.setup');
-var setupClose = setup.querySelector('.setup-close');
-var userNameInput = document.querySelector('.setup-user-name');
+// ----------------Module4 task1 -------------------
 
 var dialogEscPress = function (evt) {
   if (evt.keyCode === ESC_KEYCODE && userNameInput !== document.activeElement) {
@@ -127,37 +105,7 @@ userNameInput.addEventListener('invalid', function () {
   }
 });
 
-var setupWizard = document.querySelector('.setup-wizard');
-var wizardCoat = setupWizard.querySelector('.wizard-coat');
-var wizardEyes = setupWizard.querySelector('.wizard-eyes');
-var wizardFireball = document.querySelector('.setup-wizard-wrap');
-var inputChangeCoat = document.querySelector('input[name=coat-color]');
-var inputChangeEyes = document.querySelector('input[name=eyes-color]');
-var inputChangeFireball = document.querySelector('input[name=fireball-color]');
-
-// Изменение цвета мантии персонажа по нажатию. Цвет мантии .setup-wizard .wizard-coat должен обновляться по нажатию на неё.
-// wizardCoat.addEventListener('click', function () {
-//   var color = renderCoat();
-//   wizardCoat.style.fill = color;
-//   inputChangeCoat.value = color;
-// });
-
-// // Изменение цвета глаз персонажа по нажатию.
-// wizardEyes.addEventListener('click', function () {
-//   var color = renderEyes();
-//   wizardEyes.style.fill = color;
-//   inputChangeEyes.value = color;
-// });
-
-// // Изменение цвета фаерболов по нажатию
-// wizardFireball.addEventListener('click', function () {
-//   var color = renderFireball();
-//   wizardFireball.style.background = color;
-//   inputChangeFireball.value = color;
-// });
-
-
-// униыерсальная функция смены цвета: элемент- то что меняем, атрибут- fill/background, цвет и значение в инпутах
+// универсальная функция смены цвета: элемент- то что меняем, атрибут- fill/background, цвет и значение в инпутах
 var changeColor = function (element, attribute, colors, input) {
   element.addEventListener('click', function () {
     var newColor = getRandElement(colors);
