@@ -19,6 +19,10 @@ var wizardFireball = setup.querySelector('.setup-fireball-wrap');
 var inputChangeCoat = document.querySelector('input[name=coat-color]');
 var inputChangeEyes = document.querySelector('input[name=eyes-color]');
 var inputChangeFireball = document.querySelector('input[name=fireball-color]');
+var setupPosition = { // берем значения из main.css
+  left: '50%',
+  top: '80px'
+};
 
 var getRandElement = function (array) {
   var index = Math.floor(Math.random() * array.length);
@@ -62,6 +66,8 @@ var dialogEscPress = function (evt) {
 var openDialog = function () {
   setup.classList.remove('hidden');
   document.addEventListener('keydown', dialogEscPress);
+  setup.style.left = setupPosition.left;
+  setup.style.top = setupPosition.top;
 };
 
 var closeDialog = function () {
@@ -80,6 +86,7 @@ setupOpen.addEventListener('keydown', function (evt) {
     openDialog();
   }
 });
+
 // Окно.setup должно закрываться по нажатию на элемент.setup-close, расположенный внутри окна (возврат класса hidden)
 setupClose.addEventListener('click', function () {
   closeDialog();
@@ -90,6 +97,7 @@ setupClose.addEventListener('keydown', function (evt) {
     closeDialog();
   }
 });
+
 
 // валидация формы
 
